@@ -1,0 +1,143 @@
+.register-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 35px;
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07);
+}
+
+.register-container h2 {
+    color: #1a1a1a;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    letter-spacing: -0.5px;
+    text-align: center;
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    background: white;
+    padding: 0 8px;
+    font-size: 12px;
+    color: #666;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 16px;
+    border: 2px solid #e1e1e1;
+    border-radius: 12px;
+    font-size: 15px;
+    transition: all 0.25s ease;
+    background: transparent;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: #000;
+    box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.05);
+}
+
+.btn-primary {
+    width: 100%;
+    padding: 16px;
+    background: #000;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    margin-top: 15px;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+.links {
+    margin-top: 25px;
+    text-align: center;
+    position: relative;
+}
+
+.links::before {
+    content: "";
+    position: absolute;
+    top: -12px;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(to right, transparent, #e1e1e1, transparent);
+}
+
+.links a {
+    color: #000;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: opacity 0.2s ease;
+}
+
+.links a:hover {
+    opacity: 0.7;
+}
+
+/* Floating label animation */
+.form-control:focus+label,
+.form-control:not(:placeholder-shown)+label {
+    color: #000;
+    transform: translateY(-5px);
+}
+
+/* Custom placeholder styles */
+.form-control::placeholder {
+    color: #aaa;
+    opacity: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+    .register-container {
+        margin: 20px;
+        padding: 25px;
+    }
+
+    .form-control {
+        padding: 14px;
+    }
+
+    .btn-primary {
+        padding: 14px;
+    }
+}
+
+/* Optional: Add a subtle gradient background to the container */
+body {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 20px;
+}

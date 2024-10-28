@@ -1,0 +1,118 @@
+.login-form {
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.login-form h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.login-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.login-form input {
+    padding: 12px 16px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.login-form input:focus {
+    outline: none;
+    border-color: #4285f4;
+    box-shadow: 0 0 0 2px rgba(66, 133, 244, 0.1);
+}
+
+.login-form button[type="submit"] {
+    background: #4285f4;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-form button[type="submit"]:hover {
+    background: #3367d6;
+}
+
+.login-form p {
+    text-align: center;
+    color: #666;
+    margin: 1.5rem 0;
+    position: relative;
+}
+
+.login-form p::before,
+.login-form p::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 45%;
+    height: 1px;
+    background: #ddd;
+}
+
+.login-form p::before {
+    left: 0;
+}
+
+.login-form p::after {
+    right: 0;
+}
+
+.login-with-google {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 1.5rem;
+}
+
+.login-with-google:hover {
+    background: #f8f9fa;
+}
+
+.login-with-google img {
+    width: 24px;
+    height: 24px;
+}
+
+.login-with-google a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.login-form>a {
+    display: block;
+    text-align: center;
+    color: #4285f4;
+    text-decoration: none;
+    font-size: 0.9rem;
+    margin-top: 1rem;
+}
+
+.login-form>a:hover {
+    text-decoration: underline;
+}
