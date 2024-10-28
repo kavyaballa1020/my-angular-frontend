@@ -1,0 +1,41 @@
+<div class="landing-container">
+    <div class="header">
+        <h1 class="title">{{ title }}</h1>
+        <p class="subtitle">{{ subtitle }}</p>
+    </div>
+
+    <div class="sensor-data-cards">
+        <div *ngFor="let sensor of sensorData" class="sensor-card">
+            <h2>{{ sensor.name }}</h2>
+            <p>{{ sensor.value }} {{ sensor.unit }}</p>
+        </div>
+    </div>
+
+    <div class="benefits">
+        <h2>Benefits of Our Application</h2>
+        <ul>
+            <li *ngFor="let benefit of benefits">{{ benefit }}</li>
+        </ul>
+    </div>
+
+    <div class="features">
+        <h2>Key Features</h2>
+        <ul>
+            <li *ngFor="let feature of features">{{ feature }}</li>
+        </ul>
+    </div>
+
+    <div class="management-tips">
+        <h2>Manage Your Pond Effectively</h2>
+        <ul>
+            <li *ngFor="let tip of managementTips">{{ tip }}</li>
+        </ul>
+    </div>
+
+    <button class="start-btn" routerLink="/login">Get Started Now</button>
+
+    <footer class="footer">
+        <p>&copy; 2024 Fish Pond Monitoring. All rights reserved.</p>
+        <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+    </footer>
+</div>

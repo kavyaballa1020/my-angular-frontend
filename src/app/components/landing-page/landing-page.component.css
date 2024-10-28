@@ -1,0 +1,266 @@
+.landing-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(135deg, #84fab0, #8fd3f4);
+    padding: 2rem;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    color: #023047;
+}
+.header {
+    margin-bottom: 3rem;
+}
+
+.title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    color: #545e75;
+}
+
+/* Sensor data cards */
+.sensor-data-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom: 3rem;
+    /* Spacing between sections */
+}
+
+.sensor-card {
+    background: rgba(255, 255, 255, 0.85);
+    /* Semi-transparent background */
+    backdrop-filter: blur(10px);
+    /* Blur effect */
+    padding: 1.5rem;
+    border-radius: 12px;
+    /* Softer corners */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sensor-card:hover {
+    transform: translateY(-5px);
+    /* Slight lift effect */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+    /* Enhanced shadow on hover */
+}
+
+.sensor-card h2 {
+    font-size: 1.75rem;
+    margin: 0 0 0.5rem 0;
+    color: #023047;
+}
+
+.sensor-card p {
+    font-size: 1rem;
+    color: #4f5d75;
+}
+
+/* Benefits Section */
+.benefits {
+    margin-top: 2rem;
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    width: 100%;
+    max-width: 800px;
+    text-align: left;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.benefits h2 {
+    color: #023047;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.benefits ul {
+    list-style-type: disc;
+    margin-left: 1.5rem;
+}
+
+.benefits li {
+    color: #4f5d75;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+/* How It Works Section */
+.how-it-works {
+    margin-top: 2rem;
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    width: 100%;
+    max-width: 800px;
+    text-align: left;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.how-it-works h2 {
+    color: #023047;
+    font-size: 2rem;
+}
+
+.how-it-works p {
+    color: #4f5d75;
+    font-size: 1.1rem;
+}
+
+/* Testimonials Section */
+.testimonials {
+    margin-top: 2rem;
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    width: 100%;
+    max-width: 800px;
+    text-align: left;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.testimonials h2 {
+    color: #023047;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.testimonial {
+    color: #4f5d75;
+    font-size: 1.1rem;
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+.testimonial span {
+    display: block;
+    font-weight: bold;
+    color: #023047;
+    margin-top: 0.5rem;
+}
+
+/* CTA Button */
+.start-btn {
+    background-color: #023047;
+    color: #ffffff;
+    font-size: 1.25rem;
+    /* Larger font size */
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 12px;
+    /* Softer corners */
+    cursor: pointer;
+    margin-top: 3rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.start-btn:hover {
+    background-color: #11586a;
+    transform: scale(1.05);
+    /* Scale effect on hover */
+}
+
+/* Footer styles */
+.footer {
+    margin-top: 3rem;
+    text-align: center;
+    color: #023047;
+    font-size: 0.875rem;
+}
+
+.footer a {
+    color: #11586a;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+/* Benefits and Features Sections */
+.benefits,
+.features {
+    margin-top: 2rem;
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    width: 100%;
+    max-width: 800px;
+    text-align: left;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.benefits h2,
+.features h2 {
+    color: #023047;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+/* Testimonials Section */
+.testimonials {
+    margin-top: 2rem;
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    width: 100%;
+    max-width: 800px;
+    text-align: left;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.testimonials h2 {
+    color: #023047;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.testimonial {
+    color: #4f5d75;
+    font-size: 1.1rem;
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+.testimonial span {
+    display: block;
+    font-weight: bold;
+    color: #023047;
+    margin-top: 0.5rem;
+}
+/* Management Tips Section */
+.management-tips {
+    margin-top: 2rem;
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    width: 100%;
+    max-width: 800px;
+    text-align: left;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.management-tips h2 {
+    color: #023047;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.management-tips ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.management-tips li {
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+    color: #4f5d75;
+}
