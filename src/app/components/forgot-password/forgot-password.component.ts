@@ -20,7 +20,7 @@ export class ForgotPasswordComponent {
     this.userService.forgotPassword(this.data).subscribe({
       next: (res) => {
         alert(res);
-        this.router.navigate(['/login']); // Redirect to login page after successful reset
+        this.router.navigate(['/login']); 
       },
       error: (err) => alert('Failed to reset password')
     });
