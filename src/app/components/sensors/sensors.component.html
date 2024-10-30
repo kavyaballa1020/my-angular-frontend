@@ -1,35 +1,51 @@
 <div class="sensors-container">
     <h2>Sensor Readings</h2>
+
     <div class="card">
+        <img src="path/to/ph_image.png" alt="pH Level" class="sensor-image">
         <div class="sensor-item">
             <span class="sensor-label">pH Level:</span>
             <span class="sensor-value">{{ sensorData.ph }}</span>
         </div>
+        <button class="sensor-button" routerLink="/analysis">View Details</button>
     </div>
+
     <div class="card">
+        <img src="path/to/temperature_image.png" alt="Temperature" class="sensor-image">
         <div class="sensor-item">
             <span class="sensor-label">Temperature:</span>
             <span class="sensor-value">{{ sensorData.temperature }} °C</span>
         </div>
+        <button class="sensor-button" routerLink="/analysis">View Details</button>
     </div>
+
     <div class="card">
+        <img src="path/to/water_level_image.png" alt="Water Level" class="sensor-image">
         <div class="sensor-item">
             <span class="sensor-label">Water Level:</span>
             <span class="sensor-value">{{ sensorData.waterLevel }}%</span>
         </div>
+        <button class="sensor-button" routerLink="/analysis">View Details</button>
     </div>
+
     <div class="card">
+        <img src="path/to/rainfall_image.png" alt="Rainfall" class="sensor-image">
         <div class="sensor-item">
             <span class="sensor-label">Rainfall:</span>
             <span class="sensor-value">{{ sensorData.rain }} mm</span>
         </div>
+        <button class="sensor-button" routerLink="/analysis">View Details</button>
     </div>
+
     <div class="card">
+        <img src="path/to/oxygen_level_image.png" alt="Oxygen Level" class="sensor-image">
         <div class="sensor-item">
             <span class="sensor-label">Oxygen Level:</span>
             <span class="sensor-value">{{ sensorData.oxygen }} mg/L</span>
         </div>
+        <button class="sensor-button" routerLink="/analysis">View Details</button>
     </div>
+
     <div class="sensor-footer">
         <p>Monitor these values to ensure optimal conditions for your fish.</p>
     </div>

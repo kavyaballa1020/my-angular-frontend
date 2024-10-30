@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: linear-gradient(135deg, #84fab0, #8fd3f4);
+        background: linear-gradient(135deg, #84fab0, #8fd3f4);
     padding: 2rem;
     text-align: center;
     font-family: 'Arial', sans-serif;
@@ -236,7 +236,6 @@
     color: #023047;
     margin-top: 0.5rem;
 }
-/* Management Tips Section */
 .management-tips {
     margin-top: 2rem;
     padding: 2rem;

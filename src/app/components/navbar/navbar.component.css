@@ -1,0 +1,88 @@
+/* Navbar styles */
+.navbar {
+    background-color: #0e253c;
+    /* Navy blue background */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    padding: 1rem 2rem;
+}
+
+/* Container styles */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Brand styles */
+.navbar-brand {
+    font-size: 1.75rem;
+    font-weight: bold;
+    color: #ffffff;
+    /* White text for brand */
+    transition: color 0.3s;
+}
+
+.navbar-brand:hover {
+    color: #f0f0f0;
+    /* Slightly lighter white on hover */
+}
+
+/* Nav menu styles */
+.navbar-menu {
+    display: flex;
+}
+
+/* Nav link styles */
+.navbar-nav {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.nav-item {
+    margin-left: 2rem;
+    /* Space between items */
+}
+
+.nav-link {
+    font-size: 1.2rem;
+    /* Slightly larger font */
+    color: #ffffff;
+    /* White text for links */
+    padding: 0.75rem 1.25rem;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    text-decoration: none;
+    /* Remove underline */
+}
+
+/* Active link styles */
+.nav-link.active {
+    background-color: #00eeff;
+    /* Bootstrap primary color for active link */
+    color: #ffffff;
+    /* White text for active link */
+}
+
+/* Hover styles */
+.nav-link:hover {
+    background-color: #1dabf2;
+    /* Darker blue background on hover */
+    color: #ffffff;
+    /* White text on hover */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .navbar-menu {
+        flex-direction: column;
+        /* Stack items vertically on smaller screens */
+        margin-top: 1rem;
+    }
+
+    .nav-item {
+        margin: 0.5rem 0;
+        /* Space between items */
+    }
+}

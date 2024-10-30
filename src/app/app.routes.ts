@@ -6,6 +6,7 @@ import { ForgotPasswordComponent } from './components/forgot-password/forgot-pas
 import { PondsComponent } from './components/ponds/ponds.component';
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
 import { SensorsComponent } from './components/sensors/sensors.component';
+import { AnalysisVisualisationComponent } from './components/analysis-visualisation/analysis-visualisation.component';
 
 export const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -14,6 +15,7 @@ export const routes: Routes = [
   { path: '', redirectTo: '/landing', pathMatch: 'full' },
   { path: 'ponds', component: PondsComponent },
   {path:'landing',component:LandingPageComponent},
-  {path:'sensor', component:SensorsComponent}
+  {path:'sensor', component:SensorsComponent},
+  {path:'analysis', component:AnalysisVisualisationComponent}
 ];
 

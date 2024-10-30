@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-sensors',
   standalone: true,
-  imports: [],
+  imports: [RouterModule],
   templateUrl: './sensors.component.html',
   styleUrl: './sensors.component.css'
 })

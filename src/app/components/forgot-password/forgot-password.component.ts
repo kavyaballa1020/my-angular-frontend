@@ -7,7 +7,7 @@ import { RouterModule, Router } from '@angular/router';
 @Component({
   selector: 'app-forgot-password',
   templateUrl: './forgot-password.component.html',
-  styleUrls: ['./forgot-password.component.css'], // corrected 'styleUrl' to 'styleUrls'
+  styleUrls: ['./forgot-password.component.css'], 
   standalone: true,
   imports: [CommonModule, FormsModule, RouterModule]
 })

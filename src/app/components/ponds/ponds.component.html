@@ -2,8 +2,7 @@
     <div class="card" *ngFor="let pond of ponds">
         <h3>{{ pond.name }}</h3>
         <div class="card-image">
-            <img src="https://www.agriculture.com/thmb/F470pJd4uVVhiJuZDJ1gOTuUE8g=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/100008958_preview-efb5c8518bbd4f9689fe61d785fb4a4b.jpg"
-                alt="Pond image" />
+            <img [src]="pond.image" alt="Pond image" />
         </div>
         <div class="card-buttons">
             <button class="btn btn-primary" (click)="viewDetails(pond)" routerLink="/sensor">View Details</button>
