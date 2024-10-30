@@ -11,33 +11,14 @@ import { RouterModule } from '@angular/router';
   imports:[CommonModule,FormsModule,RouterModule]
 })
 export class LandingPageComponent {
-  title = 'Fish Pond Monitoring Application';
-  subtitle = 'Monitor and maintain optimal conditions for your fish.';
-  sensorData = [
-    { name: 'pH Level', value: '7.5', unit: 'pH' },
-    { name: 'Temperature', value: '25', unit: '°C' },
-    { name: 'Water Level', value: '80', unit: '%' },
-    { name: 'Rainfall', value: '10', unit: 'mm' },
-    { name: 'Oxygen Level', value: '6', unit: 'mg/L' },
+ sensors = [
+    { name: 'pH Level', value: '7.5', description: 'To maintain pH level of the pond.', icon: '🌡️' },
+    { name: 'Oxygen Level', value: '8 mg/L', description: 'Dissolved oxygen in the pond.', icon: '💧' },
+    { name: 'Temperature', value: '25°C', description: 'Water temperature in the pond.', icon: '🌞' },
+    { name: 'Water Level', value: '3 meters', description: 'Current water level in the pond.', icon: '🌊' },
+    { name: 'Rainfall', value: '12 mm', description: 'Rainfall accumulation in the area.', icon: '☔' },
+    { name: 'Real-Time Sensor', value: 'Active', description: 'Provides real-time monitoring data.', icon: '📡' }
   ];
-  benefits = [
-    'Ensure optimal living conditions for your fish.',
-    'Monitor environmental changes in real-time.',
-    'Receive alerts for any critical parameter deviations.',
-    'Make informed decisions for better fish health.',
-  ];
+ponds: any;
 
-  features = [
-    'Real-time data monitoring with sensors.',
-    'User-friendly interface for easy navigation.',
-    'Detailed analytics for long-term trends.',
-    'Mobile access for on-the-go monitoring.',
-  ];
-
-  managementTips = [
-    'If the temperature rises above optimal levels, consider adding cool water or aerating the pond.',
-    'Should the pH level be high, use pH decreaser solutions to balance it.',
-    'Regularly monitor oxygen levels and ensure proper aeration to maintain fish health.',
-    'Be aware of rainfall and adjust water levels as necessary to prevent overflow.',
-  ];
 }

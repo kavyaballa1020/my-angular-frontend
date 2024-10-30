@@ -1,265 +1,123 @@
-.landing-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-        background: linear-gradient(135deg, #84fab0, #8fd3f4);
-    padding: 2rem;
-    text-align: center;
-    font-family: 'Arial', sans-serif;
-    color: #023047;
-}
-.header {
-    margin-bottom: 3rem;
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f8ff;
+  color: #333;
+  margin: 0;
+  padding: 0;
 }
 
-.title {
-    font-size: 3rem;
-    font-weight: 700;
-    margin: 0;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
 }
 
-.subtitle {
-    font-size: 1.5rem;
-    color: #545e75;
+/* About Project Section */
+.about-project {
+  text-align: center; /* Center-align the project section text */
+  margin-bottom: 30px;
 }
 
-/* Sensor data cards */
-.sensor-data-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1.5rem;
-    width: 100%;
-    max-width: 1200px;
-    margin-bottom: 3rem;
-    /* Spacing between sections */
+.project-title {
+  font-size: 4.5em;
+  color: #2ab8cb;
+  margin-bottom: 50px;
+  font-family: 'Times New Roman', Times, serif;
 }
 
-.sensor-card {
-    background: rgba(255, 255, 255, 0.85);
-    /* Semi-transparent background */
-    backdrop-filter: blur(10px);
-    /* Blur effect */
-    padding: 1.5rem;
-    border-radius: 12px;
-    /* Softer corners */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+.sub-title {
+  font-size: 3em;
+  color: #2ab8cb;
+  margin-bottom: 5rem;
 }
 
-.sensor-card:hover {
-    transform: translateY(-5px);
-    /* Slight lift effect */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
-    /* Enhanced shadow on hover */
+/* Project Features List */
+.project-features {
+  list-style-type: none; /* Remove default bullet points */
+  padding: 0; /* Remove padding */
+  margin: 20px 0; /* Add vertical margin */
+  display: inline-block; /* Centering container */
 }
 
-.sensor-card h2 {
-    font-size: 1.75rem;
-    margin: 0 0 0.5rem 0;
-    color: #023047;
+.project-features li {
+  font-size: 1em;
+  padding: 8px 0; /* Space between each item */
+  color: #333; /* Text color */
+  list-style-type: disc; /* Use disc bullet points */
+  text-align: left; 
 }
 
-.sensor-card p {
-    font-size: 1rem;
-    color: #4f5d75;
+/* Font Awesome Icon Styling */
+.project-features li i {
+  color: #2ab8cb;
+  margin-right: 8px; 
+  font-size: 1.2em;
 }
 
-/* Benefits Section */
-.benefits {
-    margin-top: 2rem;
-    padding: 2rem;
-    background-color: rgba(255, 255, 255, 0.9);
-    border-radius: 12px;
-    width: 100%;
-    max-width: 800px;
-    text-align: left;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+/* Sensor Cards */
+.sensor-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  width: 100%;
+  margin-top: 20px;
 }
 
-.benefits h2 {
-    color: #023047;
-    margin-bottom: 1rem;
-    font-size: 2rem;
+
+.card {
+  background: linear-gradient(145deg, #00bcd4, #004d61);
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  color: #f4faff; /* Light text for contrast */
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.benefits ul {
-    list-style-type: disc;
-    margin-left: 1.5rem;
+.card:hover {
+  transform: scale(1.06);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-.benefits li {
-    color: #4f5d75;
-    font-size: 1.1rem;
-    margin-bottom: 0.5rem;
+/* Pond Cards */
+.pond-cards {
+  text-align: center;
+  margin-top: 40px; /* Space above the pond cards */
 }
 
-/* How It Works Section */
-.how-it-works {
-    margin-top: 2rem;
-    padding: 2rem;
-    background-color: rgba(255, 255, 255, 0.9);
-    border-radius: 12px;
-    width: 100%;
-    max-width: 800px;
-    text-align: left;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+.pond-cards h2 {
+  margin-bottom: 20px; /* Space below the pond title */
 }
 
-.how-it-works h2 {
-    color: #023047;
-    font-size: 2rem;
+.pond-cards .card {
+  background: linear-gradient(145deg, #4caf50, #0d4e14); /* Different gradient for pond cards */
+  color: #f4faff; /* Light text for contrast */
 }
 
-.how-it-works p {
-    color: #4f5d75;
-    font-size: 1.1rem;
+/* Icon and Text Styling */
+.icon {
+  font-size: 2.5em;
+  color: #ffcc00; /* Bright accent color */
+  margin-bottom: 15px;
 }
 
-/* Testimonials Section */
-.testimonials {
-    margin-top: 2rem;
-    padding: 2rem;
-    background-color: rgba(255, 255, 255, 0.9);
-    border-radius: 12px;
-    width: 100%;
-    max-width: 800px;
-    text-align: left;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+.card h3 {
+  font-size: 1.4em;
+  color: #fff;
+  margin-top: 10px;
 }
 
-.testimonials h2 {
-    color: #023047;
-    font-size: 2rem;
-    margin-bottom: 1rem;
+.card p {
+  font-size: 1em;
+  margin: 8px 0;
+  color: #f4faff;
+  
 }
 
-.testimonial {
-    color: #4f5d75;
-    font-size: 1.1rem;
-    font-style: italic;
-    margin-bottom: 1rem;
-}
-
-.testimonial span {
-    display: block;
-    font-weight: bold;
-    color: #023047;
-    margin-top: 0.5rem;
-}
-
-/* CTA Button */
-.start-btn {
-    background-color: #023047;
-    color: #ffffff;
-    font-size: 1.25rem;
-    /* Larger font size */
-    padding: 0.75rem 2rem;
-    border: none;
-    border-radius: 12px;
-    /* Softer corners */
-    cursor: pointer;
-    margin-top: 3rem;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.start-btn:hover {
-    background-color: #11586a;
-    transform: scale(1.05);
-    /* Scale effect on hover */
-}
-
-/* Footer styles */
-.footer {
-    margin-top: 3rem;
-    text-align: center;
-    color: #023047;
-    font-size: 0.875rem;
-}
-
-.footer a {
-    color: #11586a;
-    text-decoration: none;
-}
-
-.footer a:hover {
-    text-decoration: underline;
-}
-/* Benefits and Features Sections */
-.benefits,
-.features {
-    margin-top: 2rem;
-    padding: 2rem;
-    background-color: rgba(255, 255, 255, 0.9);
-    border-radius: 12px;
-    width: 100%;
-    max-width: 800px;
-    text-align: left;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-}
-
-.benefits h2,
-.features h2 {
-    color: #023047;
-    font-size: 2rem;
-    margin-bottom: 1rem;
-}
-
-/* Testimonials Section */
-.testimonials {
-    margin-top: 2rem;
-    padding: 2rem;
-    background-color: rgba(255, 255, 255, 0.9);
-    border-radius: 12px;
-    width: 100%;
-    max-width: 800px;
-    text-align: left;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-}
-
-.testimonials h2 {
-    color: #023047;
-    font-size: 2rem;
-    margin-bottom: 1rem;
-}
-
-.testimonial {
-    color: #4f5d75;
-    font-size: 1.1rem;
-    font-style: italic;
-    margin-bottom: 1rem;
-}
-
-.testimonial span {
-    display: block;
-    font-weight: bold;
-    color: #023047;
-    margin-top: 0.5rem;
-}
-.management-tips {
-    margin-top: 2rem;
-    padding: 2rem;
-    background-color: rgba(255, 255, 255, 0.9);
-    border-radius: 12px;
-    width: 100%;
-    max-width: 800px;
-    text-align: left;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-}
-
-.management-tips h2 {
-    color: #023047;
-    font-size: 2rem;
-    margin-bottom: 1rem;
-}
-
-.management-tips ul {
-    list-style-type: disc;
-    padding-left: 20px;
-}
-
-.management-tips li {
-    margin-bottom: 0.5rem;
-    font-size: 1.1rem;
-    color: #4f5d75;
+.card strong {
+  color: #ffd700;
 }

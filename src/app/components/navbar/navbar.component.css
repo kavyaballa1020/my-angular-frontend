@@ -1,88 +1,143 @@
-/* Navbar styles */
+/* Navbar Container */
 .navbar {
-    background-color: #0e253c;
-    /* Navy blue background */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-    padding: 1rem 2rem;
+    background-color: #599ec0;
+    padding: 1.5rem;
+    /* Increased padding for a larger navbar */
+    height: 60px;
+    margin-bottom: 80px;
 }
 
-/* Container styles */
 .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex: 1;
 }
 
-/* Brand styles */
 .navbar-brand {
-    font-size: 1.75rem;
-    font-weight: bold;
-    color: #ffffff;
-    /* White text for brand */
-    transition: color 0.3s;
+    color: white;
+    font-size: 2rem;
+    text-decoration: none;
+    margin-right: auto;
 }
 
-.navbar-brand:hover {
-    color: #f0f0f0;
-    /* Slightly lighter white on hover */
-}
-
-/* Nav menu styles */
-.navbar-menu {
-    display: flex;
-}
-
-/* Nav link styles */
+/* Navbar Links */
 .navbar-nav {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+    list-style: none;
     display: flex;
+    margin: 0;
+    /* Remove default margin */
 }
 
 .nav-item {
-    margin-left: 2rem;
-    /* Space between items */
+    margin: 0 20px;
+    /* Increased margin for more spacing */
 }
 
+/* Modernized Nav-Link with Hover Effect */
 .nav-link {
-    font-size: 1.2rem;
-    /* Slightly larger font */
-    color: #ffffff;
-    /* White text for links */
-    padding: 0.75rem 1.25rem;
-    border-radius: 5px;
-    transition: background-color 0.3s, color 0.3s;
+    color: white;
     text-decoration: none;
-    /* Remove underline */
+    padding: 0.5rem 1.5rem;
+    /* Increased padding for links */
+    font-size: 1.2rem;
+    /* Increased font size for links */
+    position: relative;
+    transition: color 0.3s ease;
 }
 
-/* Active link styles */
-.nav-link.active {
-    background-color: #00eeff;
-    /* Bootstrap primary color for active link */
-    color: #ffffff;
-    /* White text for active link */
-}
-
-/* Hover styles */
+/* Hover effect with color fade and underline animation */
 .nav-link:hover {
-    background-color: #1dabf2;
-    /* Darker blue background on hover */
-    color: #ffffff;
-    /* White text on hover */
+    color: #f0f0f0;
 }
 
-/* Responsive styles */
-@media (max-width: 768px) {
-    .navbar-menu {
-        flex-direction: column;
-        /* Stack items vertically on smaller screens */
-        margin-top: 1rem;
-    }
+.nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
 
-    .nav-item {
-        margin: 0.5rem 0;
-        /* Space between items */
+.nav-link:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.login {
+    color: white;
+    background-color: transparent;
+    /* Make background transparent, can change as needed */
+    padding: 0.5rem 1.5rem;
+    /* Same padding as nav links */
+    font-size: 1.2rem;
+    /* Same font size as nav links */
+    border: none;
+    /* Remove default border */
+    cursor: pointer;
+    /* Pointer cursor on hover */
+    position: relative;
+    /* Allow for pseudo-elements */
+    transition: color 0.3s ease;
+    /* Transition for color changes */
+}
+
+/* Hover effect for login button */
+.login:hover {
+    color: #f0f0f0;
+    /* Change color on hover */
+}
+
+.login::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+
+.login:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+/* Active Link */
+.active {
+    border-bottom: 2px solid white;
+}
+
+/* Navbar Toggler for Mobile */
+.navbar-toggler {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 1.5rem;
+    /* Increased font size for toggler */
+}
+
+.navbar-collapse {
+    display: none;
+}
+
+.navbar-collapse.show {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 768px) {
+    .navbar-collapse {
+        display: flex !important;
+        /* Show in larger screens */
     }
 }

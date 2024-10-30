@@ -1,41 +1,45 @@
-<div class="landing-container">
-    <div class="header">
-        <h1 class="title">{{ title }}</h1>
-        <p class="subtitle">{{ subtitle }}</p>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div class="home-container">
+    <!-- About Project Section -->
+    <div class="about-project">
+        <p class="project-title">FISH POND MONITORING SYSTEM</p>
+        <p class="sub-title">Intelligent Aquatic Ecosystem Management</p>
+        <h2>Revolutionize Your Pond Management</h2>
+        <p>
+            Step into the future of aquaculture with our cutting-edge IoT-Based Smart Pond Monitoring System.
+        </p>
+        <ul class="project-features">
+            <li><i class="fa fa-check-square-o"></i> Experience real-time insights.</li>
+            <li><i class="fa fa-check-square-o"></i> Precision control for a thriving aquatic ecosystem.</li>
+            <li><i class="fa fa-check-square-o"></i> Monitoring of temperature, pH, water level, rainfall, and oxygen
+                levels.</li>
+            <li><i class="fa fa-check-square-o"></i> Real-time data collection and storage.</li>
+            <li><i class="fa fa-check-square-o"></i> User authentication and role-based access (Admin and User roles).
+            </li>
+            <li><i class="fa fa-check-square-o"></i> Graphical representation of sensor data for analysis.</li>
+            <li><i class="fa fa-check-square-o"></i> Administrative control to modify settings and parameters.</li>
+            <li><i class="fa fa-check-square-o"></i> Secure data transmission from sensors to the server.</li>
+            <li><i class="fa fa-check-square-o"></i> Mobile and desktop accessibility via a responsive web interface.
+            </li>
+        </ul>
     </div>
 
-    <div class="sensor-data-cards">
-        <div *ngFor="let sensor of sensorData" class="sensor-card">
-            <h2>{{ sensor.name }}</h2>
-            <p>{{ sensor.value }} {{ sensor.unit }}</p>
+    <!-- Sensor Cards -->
+    <div class="sensor-cards">
+        <div class="card" *ngFor="let sensor of sensors">
+            <div class="icon">{{ sensor.icon }}</div>
+            <h3>{{ sensor.name }}</h3>
+            <p><strong>Value:</strong> {{ sensor.value }}</p>
+            <p>{{ sensor.description }}</p>
         </div>
     </div>
 
-    <div class="benefits">
-        <h2>Benefits of Our Application</h2>
-        <ul>
-            <li *ngFor="let benefit of benefits">{{ benefit }}</li>
-        </ul>
+    <!-- Pond Cards -->
+    <div class="pond-cards">
+        <div class="card" *ngFor="let pond of ponds">
+            <div class="icon">{{ pond.icon }}</div>
+            <h3>{{ pond.name }}</h3>
+            <p><strong>Status:</strong> {{ pond.status }}</p>
+        </div>
     </div>
-
-    <div class="features">
-        <h2>Key Features</h2>
-        <ul>
-            <li *ngFor="let feature of features">{{ feature }}</li>
-        </ul>
-    </div>
-
-    <div class="management-tips">
-        <h2>Manage Your Pond Effectively</h2>
-        <ul>
-            <li *ngFor="let tip of managementTips">{{ tip }}</li>
-        </ul>
-    </div>
-
-    <button class="start-btn" routerLink="/login">Get Started Now</button>
-
-    <footer class="footer">
-        <p>&copy; 2024 Fish Pond Monitoring. All rights reserved.</p>
-        <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
-    </footer>
 </div>
