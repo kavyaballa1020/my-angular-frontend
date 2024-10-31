@@ -1,0 +1,19 @@
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.image-container img:hover {
+    /* transform: scale(1.05); */
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
+}   
