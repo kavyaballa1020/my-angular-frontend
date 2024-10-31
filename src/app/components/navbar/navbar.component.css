@@ -2,9 +2,8 @@
 .navbar {
     background-color: #599ec0;
     padding: 1.5rem;
-    /* Increased padding for a larger navbar */
-    height: 60px;
-    margin-bottom: 80px;
+    height: 40px;
+    margin-bottom: 55px;
 }
 
 .container {

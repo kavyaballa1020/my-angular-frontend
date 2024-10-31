@@ -1,0 +1,224 @@
+/* Enhanced Card Container */
+.card-container {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding: 20px;
+    background: linear-gradient(135deg, #f5f7fa 0%, #e9ecef 100%);
+}
+
+/* Pond Cards with Elegant Design */
+.pond-card,
+.add-pond-card {
+    width: 250px;
+    border: none;
+    border-radius: 16px;
+    background: white;
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.08),
+        0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    overflow: hidden;
+    position: relative;
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+}
+
+.pond-card::before,
+.add-pond-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+}
+
+.pond-card:hover,
+.add-pond-card:hover {
+    transform: translateY(-10px) rotateX(5deg);
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.12),
+        0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* Add Pond Card Styling */
+.add-pond-card {
+    background: linear-gradient(145deg, #f0f5fc 0%, #e6eaf2 100%);
+    border: 2px dashed #007bff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.add-pond-card .plus-icon {
+    font-size: 3rem;
+    color: #2575fc;
+    opacity: 0.7;
+    transition: all 0.3s ease;
+}
+
+.add-pond-card:hover .plus-icon {
+    transform: scale(1.2);
+    opacity: 1;
+}
+
+/* Card Body Styling */
+.card-body {
+    padding: 25px;
+    text-align: center;
+    position: relative;
+}
+
+.card-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.card-title::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    width: 40px;
+    height: 3px;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    transform: translateX(-50%);
+    border-radius: 10px;
+}
+
+.card-text {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+/* Form Overlay with Enhanced Design */
+.add-pond-form-overlay {
+    background: rgba(44, 62, 80, 0.8);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.add-pond-form-container {
+    width: 500px;
+    background: white;
+    border-radius: 16px;
+    box-shadow:
+        0 25px 50px rgba(0, 0, 0, 0.15),
+        0 10px 20px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    position: relative;
+    overflow: hidden;
+    transform-style: preserve-3d;
+    transform: perspective(1000px) translateZ(20px);
+}
+
+.add-pond-form-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+}
+
+.add-pond-form-title {
+    font-size: 1.8rem;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.add-pond-form-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    transform: translateX(-50%);
+    border-radius: 10px;
+}
+
+/* Enhanced Form Controls */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-control {
+    border: 1.5px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 12px 15px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #2575fc;
+    box-shadow: 0 0 0 4px rgba(37, 117, 252, 0.1);
+}
+
+/* Button Group Styling */
+.button-group {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+}
+
+.btn-primary,
+.btn-secondary,
+.btn-danger {
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    transform-style: preserve-3d;
+    transform: perspective(300px);
+}
+
+.btn-primary {
+    background: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+    color: white;
+}
+
+.btn-secondary {
+    background: linear-gradient(to right, #5f6d7a 0%, #727d86 100%);
+    color: white;
+}
+
+.btn-danger {
+    background: linear-gradient(to right, #e74c3c 0%, #c0392b 100%);
+    color: white;
+}
+
+.btn-primary:hover,
+.btn-secondary:hover,
+.btn-danger:hover {
+    transform: translateY(-3px) rotateX(5deg);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .card-container {
+        justify-content: center;
+    }
+
+    .add-pond-form-container {
+        width: 90%;
+        padding: 25px;
+    }
+}

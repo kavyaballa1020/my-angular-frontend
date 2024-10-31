@@ -10,7 +10,8 @@ import { AnalysisVisualisationComponent } from './components/analysis-visualisat
 import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { FooterComponent } from './components/footer/footer.component';
-
+import { AdminComponent } from './components/admin/admin.component';
+import { PondListComponent } from './components/pond-list/pond-list.component';
 
 export const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -23,6 +24,8 @@ export const routes: Routes = [
   {path:'analysis', component:AnalysisVisualisationComponent},
   {path:'about',component:AboutComponent},
   {path:'contact',component:ContactComponent},
-  {path:'footer',component:FooterComponent}
+  {path:'footer',component:FooterComponent},
+  {path:'admin',component:AdminComponent},
+  {path:'pond-list',component:PondListComponent}
 ];
 

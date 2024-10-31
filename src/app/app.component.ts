@@ -7,11 +7,13 @@ import { LandingPageComponent } from "./components/landing-page/landing-page.com
 import { SensorsComponent } from "./components/sensors/sensors.component";
 import { NavbarComponent } from "./components/navbar/navbar.component";
 import { FooterComponent } from "./components/footer/footer.component";
+import { AdminComponent } from "./components/admin/admin.component";
+import { PondListComponent } from "./components/pond-list/pond-list.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, ForgotPasswordComponent, LoginComponent, RegisterComponent, RouterModule, LandingPageComponent, SensorsComponent, NavbarComponent, FooterComponent],
+  imports: [RouterOutlet, ForgotPasswordComponent, LoginComponent, RegisterComponent, RouterModule, LandingPageComponent, SensorsComponent, NavbarComponent, FooterComponent, AdminComponent, PondListComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
