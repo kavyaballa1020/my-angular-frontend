@@ -1,8 +1,16 @@
 <div class="ponds-container">
     <div class="card" *ngFor="let pond of ponds">
-        <h3>{{ pond.name }}</h3>
+        <h3 class="pond-name">{{ pond.name }}</h3>
         <div class="card-image">
             <img [src]="pond.image" alt="Pond image" />
+        </div>
+        <div class="pond-details">
+            <p class="pond-address">
+                <i class="fas fa-map-marker-alt"></i> {{ pond.address }}
+            </p>
+            <p class="pond-description">
+                {{ pond.description }}
+            </p>
         </div>
         <div class="card-buttons">
             <button class="btn btn-primary" (click)="viewDetails(pond)" routerLink="/sensor">View Details</button>

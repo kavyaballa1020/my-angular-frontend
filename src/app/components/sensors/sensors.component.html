@@ -2,51 +2,56 @@
     <h2>Sensor Readings</h2>
 
     <div class="card">
-        <img src="path/to/ph_image.png" alt="pH Level" class="sensor-image">
+        <i class="fas fa-vial sensor-icon ph-icon"></i>
         <div class="sensor-item">
             <span class="sensor-label">pH Level:</span>
             <span class="sensor-value">{{ sensorData.ph }}</span>
         </div>
+        <p class="sensor-description">Monitors the acidity or alkalinity of the water for a healthy pond.</p>
         <button class="sensor-button" routerLink="/analysis">View Details</button>
     </div>
 
     <div class="card">
-        <img src="path/to/temperature_image.png" alt="Temperature" class="sensor-image">
+        <i class="fas fa-thermometer-half sensor-icon temp-icon"></i>
         <div class="sensor-item">
             <span class="sensor-label">Temperature:</span>
             <span class="sensor-value">{{ sensorData.temperature }} °C</span>
         </div>
+        <p class="sensor-description">Ensures optimal temperature levels for aquatic life.</p>
         <button class="sensor-button" routerLink="/analysis">View Details</button>
     </div>
 
     <div class="card">
-        <img src="path/to/water_level_image.png" alt="Water Level" class="sensor-image">
+        <i class="fas fa-water sensor-icon water-icon"></i>
         <div class="sensor-item">
             <span class="sensor-label">Water Level:</span>
             <span class="sensor-value">{{ sensorData.waterLevel }}%</span>
         </div>
+        <p class="sensor-description">Keeps track of water levels to maintain a balanced ecosystem.</p>
         <button class="sensor-button" routerLink="/analysis">View Details</button>
     </div>
 
     <div class="card">
-        <img src="path/to/rainfall_image.png" alt="Rainfall" class="sensor-image">
+        <i class="fas fa-cloud-rain sensor-icon rain-icon"></i>
         <div class="sensor-item">
             <span class="sensor-label">Rainfall:</span>
             <span class="sensor-value">{{ sensorData.rain }} mm</span>
         </div>
+        <p class="sensor-description">Measures rainfall to prevent overflow and maintain water balance.</p>
         <button class="sensor-button" routerLink="/analysis">View Details</button>
     </div>
 
     <div class="card">
-        <img src="path/to/oxygen_level_image.png" alt="Oxygen Level" class="sensor-image">
+        <i class="fas fa-wind sensor-icon oxygen-icon"></i>
         <div class="sensor-item">
             <span class="sensor-label">Oxygen Level:</span>
             <span class="sensor-value">{{ sensorData.oxygen }} mg/L</span>
         </div>
+        <p class="sensor-description">Monitors dissolved oxygen to support aquatic life.</p>
         <button class="sensor-button" routerLink="/analysis">View Details</button>
     </div>
 
     <div class="sensor-footer">
-        <p>Monitor these values to ensure optimal conditions for your fish.</p>
+        <p>Monitor these values to ensure optimal conditions for your pond.</p>
     </div>
 </div>

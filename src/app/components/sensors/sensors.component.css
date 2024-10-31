@@ -1,43 +1,35 @@
 .sensors-container {
     max-width: 1000px;
-    /* Increased max width to accommodate horizontal cards */
     margin: 20px auto;
     padding: 20px;
-    background: rgba(255, 255, 255, 0.95);
+    background: linear-gradient(to bottom right, #e0f7fa, #80deea);
     border-radius: 15px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
     display: flex;
-    /* Use flexbox to arrange cards */
     flex-wrap: wrap;
-    /* Allow wrapping to next line if necessary */
     justify-content: space-between;
-    /* Space between cards */
 }
 
 h2 {
     text-align: center;
-    color: #333;
+    color: #00796b;
     margin-bottom: 20px;
     width: 100%;
-    /* Ensure the heading takes full width */
 }
 
 .card {
-    background: #f9f9f9;
+    background: #ffffff;
     border-radius: 10px;
     padding: 15px;
     margin: 10px;
-    /* Margin to give space around cards */
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s, box-shadow 0.2s;
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* Center items in card */
     flex: 1 1 30%;
-    /* Flex-grow, flex-shrink, flex-basis; adjust width as needed */
-    max-width: 200px;
-    /* Set a max width for cards */
+    max-width: 250px;
+    text-align: center;
 }
 
 .card:hover {
@@ -45,26 +37,44 @@ h2 {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
-.sensor-image {
-    width: 80px;
-    /* Set desired width */
-    height: auto;
-    /* Maintain aspect ratio */
+.sensor-icon {
+    font-size: 40px;
     margin-bottom: 10px;
+}
+
+.ph-icon {
+    color: #4caf50;
+}
+
+.temp-icon {
+    color: #ff5722;
+}
+
+.water-icon {
+    color: #2196f3;
+}
+
+.rain-icon {
+    color: #00acc1;
+}
+
+.oxygen-icon {
+    color: #9c27b0;
 }
 
 .sensor-item {
     display: flex;
-    justify-content: space-between;
-    padding: 10px 0;
+    justify-content: center;
+    padding: 5px 0;
     width: 100%;
-    /* Ensure full width */
+    font-weight: 500;
 }
 
 .sensor-label {
     font-weight: bold;
     color: #555;
     font-size: 1.1rem;
+    margin-right: 5px;
 }
 
 .sensor-value {
@@ -73,9 +83,16 @@ h2 {
     font-size: 1.1rem;
 }
 
+.sensor-description {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
 .sensor-button {
     margin-top: 10px;
-    padding: 10px 15px;
+    padding: 8px 15px;
     border: none;
     border-radius: 5px;
     background-color: #007bff;
@@ -86,7 +103,6 @@ h2 {
 
 .sensor-button:hover {
     background-color: #0056b3;
-    /* Darken button on hover */
 }
 
 .sensor-footer {
