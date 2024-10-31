@@ -1,25 +1,37 @@
 <nav class="navbar">
     <div class="container">
-        <a class="navbar-brand" routerLink="/">Fish Pond Monitoring System</a>
+        <a class="navbar-brand" routerLink="/">
+            <i class="fas fa-fish"></i> Fish Pond
+        </a>
         <button class="navbar-toggler" type="button" (click)="toggleNavbar()">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="navbar-collapse" [ngClass]="{ 'show': isNavbarOpen }">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" routerLink="/" routerLinkActive="active">Home</a>
+                    <a class="nav-link" routerLink="/" routerLinkActive="active">
+                        <i class="fas fa-home"></i> Home
+                    </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" routerLink="/about" routerLinkActive="active">About</a>
+                    <a class="nav-link" routerLink="/about" routerLinkActive="active">
+                        <i class="fas fa-info-circle"></i> About
+                    </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" routerLink="/contact" routerLinkActive="active">Contact</a>
+                    <a class="nav-link" routerLink="/contact" routerLinkActive="active">
+                        <i class="fas fa-envelope"></i> Contact
+                    </a>
                 </li>
                 <li class="nav-item">
-                    <button class="login" routerLink="/login">Login</button> <!-- Trigger modal -->
+                    <button class="login" routerLink="/login">
+                        <i class="fas fa-sign-in-alt"></i> Login
+                    </button>
                 </li>
                 <li class="nav-item">
-                    <button class="login" routerLink="/admin">Admin</button> <!-- Trigger modal -->
+                    <button class="login" routerLink="/admin">
+                        <i class="fas fa-user-shield"></i> Admin
+                    </button>
                 </li>
             </ul>
         </div>

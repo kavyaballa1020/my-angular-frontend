@@ -2,14 +2,9 @@
     text-align: center;
     padding: 20px;
     background-color: #599ec0;
-    ;
-    /* Dark background */
     color: white;
-    /* White text */
     position: relative;
-    /* Ensure it stays in flow of content */
     bottom: 0;
-    /* Stick to the bottom if necessary */
     width: 97.4%;
     margin-top: 100px;
 }
@@ -17,53 +12,33 @@
 .footer-content {
     display: flex;
     flex-direction: column;
-    /* Stack items vertically */
     align-items: center;
-    /* Center items horizontally */
 }
 
 .footer-btn {
     background-color: #fff;
-    /* Button background color */
     color: #36c1cb;
-    /* Button text color */
     border: none;
     border-radius: 5px;
-    /* Rounded button edges */
     padding: 10px 15px;
-    /* Button padding */
     font-size: 1rem;
-    /* Button text size */
     cursor: pointer;
-    /* Pointer cursor */
     transition: background-color 0.3s, color 0.3s;
-    /* Transition effect */
     margin-top: 10px;
-    /* Space above button */
 }
 
 .footer-btn:hover {
     background-color: #f1f1f1;
-    /* Light gray on hover */
     color: #0056b3;
-    /* Darker text color on hover */
 }
 
 .button {
     background-color: #36c1cb;
-    /* Button background color */
     color: white;
-    /* Button text color */
     border: none;
-    /* No border */
     border-radius: 5px;
-    /* Rounded edges */
     padding: 10px 15px;
-    /* Padding for the button */
     font-size: 1rem;
-    /* Font size */
     cursor: pointer;
-    /* Pointer cursor on hover */
     transition: background-color 0.3s, color 0.3s;
-    /* Transition effects */
 }
