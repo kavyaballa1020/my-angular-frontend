@@ -18,7 +18,7 @@ export class PondListComponent implements OnInit {
   newPond: Pond = { id: '', name: '', sensors: [] };
   newSensor: Sensor = { type: '', value: '' };
   showAddPondForm: boolean = false;
-  sensorView: boolean = false;  // Track whether we are in sensor view
+  sensorView: boolean = false; 
 
   constructor(private pondService: PondService) {}
 
@@ -34,15 +34,15 @@ export class PondListComponent implements OnInit {
 
   viewSensors(pondId: string): void {
     this.selectedPondId = pondId;
-    this.sensorView = true;  // Switch to sensor view
+    this.sensorView = true;  
     this.pondService.getSensorsByPond(pondId).subscribe((data) => {
       this.sensors = data;
     });
   }
 
   backToPonds(): void {
-    this.sensorView = false;  // Switch back to pond list view
-    this.selectedPondId = ''; // Clear selected pond ID
+    this.sensorView = false;  
+    this.selectedPondId = ''; 
   }
 
   toggleAddPondForm(): void {

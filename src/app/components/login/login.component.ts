@@ -23,7 +23,7 @@ login() {
   const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
   this.http.post('http://localhost:8080/api/users/login', this.credentials, { headers, observe: 'response' })
     .subscribe({
-      next: () => this.router.navigate(['/ponds']),
+      next: () => this.router.navigate(['/user-ponds']),
       error: (error) => {
         console.error('Login error:', error); 
         alert('Invalid credentials. Please check your login and password.');

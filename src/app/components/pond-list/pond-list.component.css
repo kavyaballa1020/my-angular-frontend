@@ -1,9 +1,7 @@
-/* Overall Container */
 .container-fluid {
     padding: 20px;
 }
 
-/* Flexbox container for cards */
 .card-container {
     display: flex;
     gap: 1rem;
@@ -11,7 +9,6 @@
     justify-content: flex-start;
 }
 
-/* Pond and Add Pond Cards Styling */
 .pond-card,
 .add-pond-card {
     width: 220px;
@@ -33,7 +30,6 @@
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* Add Pond Button Card */
 .add-pond-card {
     background-color: #f4f6f8;
     justify-content: center;
@@ -50,7 +46,6 @@
     margin: 0;
 }
 
-/* Pond Card Contents */
 .card-body {
     text-align: center;
 }
@@ -68,7 +63,6 @@
     margin-bottom: 15px;
 }
 
-/* Sensor Container for Sensor Cards */
 .sensor-container {
     display: flex;
     flex-wrap: wrap;
@@ -77,13 +71,11 @@
     justify-content: center;
 }
 
-/* Sensor Card Styling with Aqua Background */
 .sensor-card {
     width: 180px;
     border: 1px solid #ddd;
     border-radius: 8px;
     background-color: #e0f7fa;
-    /* Aqua background color */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
     padding: 16px;
@@ -92,14 +84,12 @@
     align-items: center;
 }
 
-/* Icon Styling for Each Sensor */
 .sensor-icon {
     font-size: 2rem;
     color: #007bff;
     margin-bottom: 8px;
 }
 
-/* Sensor Information */
 .sensor-info {
     text-align: center;
 }
@@ -116,7 +106,6 @@
     color: #555;
 }
 
-/* Back Button with Arrow Icon */
 .back-button {
     font-size: 1rem;
     color: #333;
@@ -130,7 +119,6 @@
     color: #007bff;
 }
 
-/* Overlay for Centered Form */
 .add-pond-form-overlay {
     position: fixed;
     top: 0;
@@ -144,7 +132,6 @@
     z-index: 1000;
 }
 
-/* Formal styling for Add Pond Form Container */
 .add-pond-form-container {
     max-width: 500px;
     padding: 30px;
@@ -157,7 +144,6 @@
     gap: 1.2rem;
 }
 
-/* Form Header */
 .add-pond-form-title {
     font-size: 1.8rem;
     font-weight: bold;
@@ -168,7 +154,6 @@
     padding-bottom: 8px;
 }
 
-/* Form Field Styling */
 .form-group {
     display: flex;
     flex-direction: column;
@@ -197,7 +182,6 @@
     box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
 }
 
-/* Button styling within the form */
 .button-group {
     display: flex;
     gap: 1rem;

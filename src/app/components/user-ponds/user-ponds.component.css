@@ -1,0 +1,269 @@
+/* General Container Styling */
+.container-fluid {
+    padding: 30px;
+    background: linear-gradient(135deg, #f6f9fc 0%, #edf1f7 100%);
+    min-height: 100vh;
+}
+
+/* Pond Card Container */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Pond Card Styling */
+.pond-card {
+    background: rgba(255, 255, 255, 0.95);
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    backdrop-filter: blur(10px);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    overflow: hidden;
+    position: relative;
+}
+
+.pond-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #00c6fb 0%, #005bea 100%);
+}
+
+.pond-card:hover {
+    transform: translateY(-12px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* Pond Icon Animation */
+.pond-card .fa-water {
+    font-size: 4rem;
+    background: linear-gradient(45deg, #00c6fb 0%, #005bea 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    opacity: 0.15;
+    transform: rotate(-15deg);
+    transition: all 0.4s ease;
+}
+
+.pond-card:hover .fa-water {
+    transform: rotate(0deg) scale(1.1);
+    opacity: 0.25;
+}
+
+.card-body {
+    padding: 2rem;
+    text-align: center;
+}
+
+.card-title {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #2d3748;
+    margin-bottom: 1rem;
+    letter-spacing: -0.5px;
+}
+
+.card-text {
+    font-size: 1.1rem;
+    color: #718096;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+}
+
+/* View Sensors Button */
+.btn-primary {
+    background: linear-gradient(90deg, #00c6fb 0%, #005bea 100%);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 198, 251, 0.3);
+}
+
+.btn-primary i {
+    margin-right: 8px;
+    transition: transform 0.3s ease;
+}
+
+.btn-primary:hover i {
+    transform: translateX(-4px);
+}
+
+/* Sensor Container */
+.sensor-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 2rem;
+    padding: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Sensor Card Styling */
+.sensor-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    padding: 1.5rem;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.sensor-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(0, 198, 251, 0.1) 0%, rgba(0, 91, 234, 0.1) 100%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.sensor-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.12);
+}
+
+.sensor-card:hover::after {
+    opacity: 1;
+}
+
+/* Sensor Icon Styling */
+.sensor-icon {
+    margin-bottom: 1rem;
+}
+
+.sensor-icon i {
+    font-size: 2.5rem;
+    background: linear-gradient(45deg, #00c6fb 0%, #005bea 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: transform 0.4s ease;
+}
+
+.sensor-card:hover .sensor-icon i {
+    transform: scale(1.1) rotate(5deg);
+}
+
+/* Sensor Info */
+.sensor-info {
+    position: relative;
+    z-index: 1;
+}
+
+.sensor-type {
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: #2d3748;
+    margin: 0.5rem 0;
+    letter-spacing: -0.5px;
+}
+
+.sensor-value {
+    font-size: 1.1rem;
+    color: #718096;
+    font-weight: 500;
+    margin: 0;
+}
+
+/* Back Button */
+.back-button {
+    font-size: 1.1rem;
+    color: #4a5568;
+    background: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 2rem;
+}
+
+.back-button:hover {
+    transform: translateX(-4px);
+    color: #005bea;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+.back-button i {
+    transition: transform 0.3s ease;
+}
+
+.back-button:hover i {
+    transform: translateX(-4px);
+}
+/* Existing CSS rules... */
+
+/* New rules for pond icons */
+.card-title i,
+.card-text i {
+    margin-right: 8px;
+    /* Space between icon and text */
+    color: #007bff;
+    /* Change icon color to match primary theme */
+    vertical-align: middle;
+    /* Align icons vertically with text */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container-fluid {
+        padding: 20px;
+    }
+
+    .card-container,
+    .sensor-container {
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
+
+    .pond-card,
+    .sensor-card {
+        width: 100%;
+    }
+}
+
+/* Loading States & Animations */
+@keyframes shimmer {
+    0% {
+        background-position: -468px 0;
+    }
+
+    100% {
+        background-position: 468px 0;
+    }
+}
+
+.loading {
+    animation: shimmer 1s linear infinite;
+    background: linear-gradient(to right, #f6f7f8 8%, #edeef1 18%, #f6f7f8 33%);
+    background-size: 800px 104px;
+}

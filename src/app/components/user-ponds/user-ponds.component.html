@@ -1,0 +1,41 @@
+<div class="container-fluid">
+    <!-- Back Button -->
+    <button class="btn btn-secondary mb-3 back-button" (click)="backToPonds()">
+        <i class="fas fa-arrow-left"></i> Back
+    </button>
+
+    <div *ngIf="!sensorView" class="card-container">
+        <!-- Pond Cards -->
+        <div class="card pond-card" *ngFor="let pond of ponds">
+            <i class="fas fa-water pond-icon"></i>
+            <div class="card-body">
+                <h5 class="card-title">
+                    <i class="fas fa-pond-water"></i> {{ pond.name }}
+                </h5>
+                <p class="card-text">
+                    <i class="fas fa-id-badge"></i> Pond ID: {{ pond.id }}
+                </p>
+                <button class="btn btn-primary" (click)="viewSensors(pond.id)">
+                    <i class="fas fa-eye"></i> View Sensors
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div *ngIf="sensorView" class="sensor-container">
+        <!-- Sensor Cards -->
+        <div class="sensor-card" *ngFor="let sensor of sensors">
+            <div class="sensor-icon">
+                <i *ngIf="sensor.type === 'pH Sensor'" class="fas fa-flask"></i>
+                <i *ngIf="sensor.type === 'Temperature Sensor'" class="fas fa-thermometer-half"></i>
+                <i *ngIf="sensor.type === 'Rain Sensor'" class="fas fa-cloud-rain"></i>
+                <i *ngIf="sensor.type === 'Oxygen Sensor'" class="fas fa-wind"></i>
+                <i *ngIf="sensor.type === 'Water Level Sensor'" class="fas fa-water"></i>
+            </div>
+            <div class="sensor-info">
+                <h6 class="sensor-type">{{ sensor.type }}</h6>
+                <p class="sensor-value">Value: {{ sensor.value }}</p>
+            </div>
+        </div>
+    </div>
+</div>
