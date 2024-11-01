@@ -18,6 +18,7 @@ export class PondListComponent implements OnInit {
   newPond: Pond = { id: '', name: '', sensors: [] };
   newSensor: Sensor = { type: '', value: '' };
   showAddPondForm: boolean = false;
+  sensorView: boolean = false;  // Track whether we are in sensor view
 
   constructor(private pondService: PondService) {}
 
@@ -33,14 +34,19 @@ export class PondListComponent implements OnInit {
 
   viewSensors(pondId: string): void {
     this.selectedPondId = pondId;
+    this.sensorView = true;  // Switch to sensor view
     this.pondService.getSensorsByPond(pondId).subscribe((data) => {
       this.sensors = data;
     });
   }
 
+  backToPonds(): void {
+    this.sensorView = false;  // Switch back to pond list view
+    this.selectedPondId = ''; // Clear selected pond ID
+  }
+
   toggleAddPondForm(): void {
     this.showAddPondForm = !this.showAddPondForm;
-    // Reset the new pond data when opening/closing the form
     if (!this.showAddPondForm) {
       this.newPond = { id: '', name: '', sensors: [] };
       this.newSensor = { type: '', value: '' };
@@ -49,28 +55,24 @@ export class PondListComponent implements OnInit {
 
   addSensor(): void {
     if (this.newSensor.type && this.newSensor.value) {
-      this.newPond.sensors?.push({ ...this.newSensor });
-      this.newSensor = { type: '', value: '' }; // Reset the sensor input fields
+      this.newPond.sensors.push({ ...this.newSensor });
+      this.newSensor = { type: '', value: '' };
     }
   }
 
   addPond(): void {
-    if (this.newPond.id && this.newPond.name) {  // Ensure both ID and name are provided
-      
-      // Define default sensors with values
+    if (this.newPond.id && this.newPond.name) {
       const defaultSensors: Sensor[] = [
-        { type: 'pH Sensor', value: '7.0' },          // Default pH value
-        { type: 'Temperature Sensor', value: '25°C' }, // Default temperature
-        { type: 'Water Level Sensor', value: 'Normal' },
+        { type: 'pH Sensor', value: '7.0' },
+        { type: 'Temperature Sensor', value: '25°C' },
         { type: 'Rain Sensor', value: 'No Rain' },
-        { type: 'Oxygen Sensor', value: '8 mg/L' }     // Default oxygen level
+        { type: 'Oxygen Sensor', value: '8 mg/L' },
+        { type: 'Water Level Sensor', value: 'Normal' }
       ];
-
       this.newPond.sensors = [...this.newPond.sensors, ...defaultSensors];
-
       this.pondService.addPond(this.newPond).subscribe((pond) => {
-        this.ponds.push(pond); 
-        this.toggleAddPondForm(); 
+        this.ponds.push(pond);
+        this.toggleAddPondForm();
       });
     } else {
       alert("Please enter both Pond ID and Pond Name.");

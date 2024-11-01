@@ -26,6 +26,7 @@ export const routes: Routes = [
   {path:'contact',component:ContactComponent},
   {path:'footer',component:FooterComponent},
   {path:'admin',component:AdminComponent},
-  {path:'pond-list',component:PondListComponent}
+  {path:'pond-list',component:PondListComponent},
+
 ];
 
