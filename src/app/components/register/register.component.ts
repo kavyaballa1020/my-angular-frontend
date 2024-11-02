@@ -20,7 +20,7 @@ export class RegisterComponent {
     this.userService.registerUser(this.user).subscribe({
       next: (res) => {
         alert('User registered successfully');
-        this.router.navigate(['/login']); // Redirect to login page
+        this.router.navigate(['/login']); 
       },
       error: (err) => alert('Registration failed')
     });

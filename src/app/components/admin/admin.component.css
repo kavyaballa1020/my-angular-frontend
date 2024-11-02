@@ -137,7 +137,6 @@
     letter-spacing: 0.3px;
 }
 
-/* Fade in animation for messages */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -150,7 +149,6 @@
     }
 }
 
-/* Responsive adjustments */
 @media (max-width: 480px) {
     .login-form {
         width: 92%;

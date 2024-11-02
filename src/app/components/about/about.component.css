@@ -1,4 +1,3 @@
-/* About Section Styles */
 .about-section {
     text-align: center;
     margin: 2rem auto;
@@ -38,7 +37,6 @@ p {
     font-family: 'Roboto', sans-serif;
 }
 
-/* Sensor List Styles */
 .sensor-list {
     list-style: none;
     padding: 0;
@@ -70,7 +68,6 @@ p {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* Team Section Styles */
 .team-section {
     background: linear-gradient(135deg, #bbdefb, #e3f2fd);
     padding: 4rem 2rem;
@@ -163,7 +160,6 @@ p {
     font-family: 'Roboto', sans-serif;
 }
 
-/* Project Guides Section Styles */
 .guides-section {
     background: linear-gradient(135deg, #e3f2fd, #bbdefb);
     padding: 4rem 2rem;
