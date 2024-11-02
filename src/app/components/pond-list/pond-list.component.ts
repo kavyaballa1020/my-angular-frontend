@@ -18,7 +18,7 @@ export class PondListComponent implements OnInit {
   newPond: Pond = { id: '', name: '', location: '', sensors: [] };
   newSensor: Sensor = { type: '', value: '' };
   showAddPondForm: boolean = false;
-  sensorView: boolean = false;  // Track whether we are in sensor view
+  sensorView: boolean = false;  
 
   constructor(private pondService: PondService) {}
 
@@ -34,15 +34,15 @@ export class PondListComponent implements OnInit {
 
   viewSensors(pondId: string): void {
     this.selectedPondId = pondId;
-    this.sensorView = true;  // Switch to sensor view
+    this.sensorView = true;  
     this.pondService.getSensorsByPond(pondId).subscribe((data) => {
       this.sensors = data;
     });
   }
 
   backToPonds(): void {
-    this.sensorView = false;  // Switch back to pond list view
-    this.selectedPondId = ''; // Clear selected pond ID
+    this.sensorView = false; 
+    this.selectedPondId = ''; 
   }
 
   toggleAddPondForm(): void {
@@ -82,17 +82,17 @@ export class PondListComponent implements OnInit {
   getSensorIcon(type: string): string {
     switch (type.toLowerCase()) {
       case 'ph sensor':
-        return 'bi bi-droplet'; // Icon for pH sensor
+        return 'bi bi-droplet'; 
       case 'temperature sensor':
-        return 'bi bi-thermometer'; // Icon for temperature sensor
+        return 'bi bi-thermometer'; 
       case 'rain sensor':
-        return 'bi bi-cloud-rain'; // Icon for rain sensor
+        return 'bi bi-cloud-rain'; 
       case 'oxygen sensor':
-        return 'bi bi-wind'; // Icon for oxygen sensor
+        return 'bi bi-wind';
       case 'water level sensor':
-        return 'bi bi-water'; // Icon for water level sensor
+        return 'bi bi-water'; 
       default:
-        return 'bi bi-info-circle'; // Default icon
+        return 'bi bi-info-circle'; 
     }
   }
 
@@ -123,9 +123,9 @@ export class PondListComponent implements OnInit {
       case 'oxygen sensor':
         return numValue < 5 || numValue > 9;
       case 'rain sensor':
-        return value.toLowerCase() !== 'no rain'; // Error if it indicates rain
+        return value.toLowerCase() !== 'no rain'; 
       case 'water level sensor':
-        return value.toLowerCase() !== 'normal'; // Error if it is not "Normal"
+        return value.toLowerCase() !== 'normal'; 
       default:
         return false;
     }
