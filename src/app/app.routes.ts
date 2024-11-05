@@ -13,6 +13,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import { AdminComponent } from './components/admin/admin.component';
 import { PondListComponent } from './components/pond-list/pond-list.component';
 import { UserPondsComponent } from './components/user-ponds/user-ponds.component';
+import { SensorDataChartComponent } from './components/sensor-data-chart/sensor-data-chart.component';
+import { SensorDataTableComponent } from './components/sensor-data-table/sensor-data-table.component';
 
 export const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -29,6 +31,8 @@ export const routes: Routes = [
   {path:'admin',component:AdminComponent},
   {path:'pond-list',component:PondListComponent},
   {path:'user-ponds',component:UserPondsComponent},
+  {path:'sensor-chart',component:SensorDataChartComponent},
+  {path:'sensor-table',component:SensorDataTableComponent},
 
 ];
 

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router'; // Import Router
 import { PondService } from '../../services/pond.service';
 import { Pond, Sensor } from '../../models/pond.model';
 import { CommonModule } from '@angular/common';
@@ -18,9 +19,9 @@ export class PondListComponent implements OnInit {
   newPond: Pond = { id: '', name: '', location: '', sensors: [] };
   newSensor: Sensor = { type: '', value: '' };
   showAddPondForm: boolean = false;
-  sensorView: boolean = false;  
+  sensorView: boolean = false;
 
-  constructor(private pondService: PondService) {}
+  constructor(private pondService: PondService, private router: Router) {} // Inject Router
 
   ngOnInit(): void {
     this.loadPonds();
@@ -34,15 +35,14 @@ export class PondListComponent implements OnInit {
 
   viewSensors(pondId: string): void {
     this.selectedPondId = pondId;
-    this.sensorView = true;  
+    this.sensorView = true;
     this.pondService.getSensorsByPond(pondId).subscribe((data) => {
       this.sensors = data;
     });
   }
 
   backToPonds(): void {
-    this.sensorView = false; 
-    this.selectedPondId = ''; 
+    this.router.navigate(['/sensor-table']); // Navigate to sensor-table route
   }
 
   toggleAddPondForm(): void {

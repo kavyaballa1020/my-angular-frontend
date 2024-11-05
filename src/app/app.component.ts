@@ -10,11 +10,13 @@ import { FooterComponent } from "./components/footer/footer.component";
 import { AdminComponent } from "./components/admin/admin.component";
 import { PondListComponent } from "./components/pond-list/pond-list.component";
 import { UserPondsComponent } from "./components/user-ponds/user-ponds.component";
+import { SensorDataChartComponent } from "./components/sensor-data-chart/sensor-data-chart.component";
+import { SensorDataTableComponent } from "./components/sensor-data-table/sensor-data-table.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, ForgotPasswordComponent, LoginComponent, RegisterComponent, RouterModule, LandingPageComponent, SensorsComponent, NavbarComponent, FooterComponent, AdminComponent, PondListComponent, UserPondsComponent],
+  imports: [RouterOutlet, ForgotPasswordComponent, LoginComponent, RegisterComponent, RouterModule, LandingPageComponent, SensorsComponent, NavbarComponent, FooterComponent, AdminComponent, PondListComponent, UserPondsComponent, SensorDataChartComponent, SensorDataTableComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
